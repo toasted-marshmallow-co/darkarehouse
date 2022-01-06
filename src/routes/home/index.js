@@ -30,7 +30,6 @@ const Home = () => (
 					</span>
 					<p class={style.description}>
 						Sophisticated warehouse automation solutions.
-						Test
 					</p>
 					<span className={style.contact}>
 						<span className={style.detail}><FiMail /> <a href="mailto: info@storagemanagement.co.za">info@storagemanagement.co.za</a></span>
