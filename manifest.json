@@ -1,7 +1,7 @@
 {
   "name": "DarkWarhouse.io",
   "short_name": "DarkWarhouse.io",
-  "start_url": "/darkwarehouse/",
+  "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#111112",
