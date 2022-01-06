@@ -25,7 +25,7 @@ const Home = () => (
 				<div class={style.content_centered}>
 					<p class={style.message}>Coming soon</p>
 					<span className={style.hero}>
-						<img class={style.logo} src={Logo}/>
+						<img class={style.logo} src={Logo} alt="Darkwarehouse Logo"/>
 						<h1 class={style.title}>DarkWarehouse</h1>
 					</span>
 					<p class={style.description}>
