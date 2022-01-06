@@ -2,7 +2,7 @@ import { h } from 'preact';
 import { Suspense, lazy } from 'preact/compat';
 import style from './style.css';
 import Loader from './../../components/loader';
-import Logo from './../../assets/images/Logo_Light.png'
+import Logo from '../../assets/images/Logo_Light.png';
 
 import { FiMail } from 'react-icons/fi';
 import { FiGlobe } from 'react-icons/fi';
@@ -29,7 +29,7 @@ const Home = () => (
 						<h1 class={style.title}>DarkWarehouse</h1>
 					</span>
 					<p class={style.description}>
-						Sophisticated warehouse automation solutions.
+						Sophisticated warehouse automation solutions. Test
 					</p>
 					<span className={style.contact}>
 						<span className={style.detail}><FiMail /> <a href="mailto: info@storagemanagement.co.za">info@storagemanagement.co.za</a></span>

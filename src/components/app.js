@@ -12,7 +12,6 @@ const App = () => (
 		{/* <Header /> */}
 		<Router>
 			<Home path="/" />
-			<Home path="/" />
 			{/* <Profile path="/profile/" user="me" />
 			<Profile path="/profile/:user" user="john"/> */}
 		</Router>
