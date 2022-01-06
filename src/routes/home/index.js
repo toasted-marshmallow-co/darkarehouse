@@ -29,7 +29,7 @@ const Home = () => (
 						<h1 class={style.title}>DarkWarehouse</h1>
 					</span>
 					<p class={style.description}>
-						Sophisticated warehouse automation solutions. Test
+						Sophisticated warehouse automation solutions.
 					</p>
 					<span className={style.contact}>
 						<span className={style.detail}><FiMail /> <a href="mailto: info@storagemanagement.co.za">info@storagemanagement.co.za</a></span>
