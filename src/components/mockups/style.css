@@ -1,0 +1,54 @@
+.api {
+    grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row-start: 3;
+    grid-row-end: 11;
+    /* object-fit: contain;
+    max-width: 45vw;
+    box-shadow: -7px 8px 20px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -7px 8px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -7px 8px 20px 0px rgba(0, 0, 0, 0.75); */
+}
+
+.ui {
+    grid-column-start: 4;
+    grid-column-end: 11;
+    grid-row-start: 4;
+    grid-row-end: 11;
+}
+
+.ui_2 {
+    grid-column-start: 2;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 11;
+}
+
+
+.card {
+    position: relative;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 45vw;
+    height: 50vh;
+    object-fit: contain;
+    padding: 2px;
+    overflow: hidden;
+    background: #252525 ;
+    border-radius: 10px;
+    box-shadow: -2px 2px 0px 0px #202020, -10px 10px 40px 0px rgba(0, 0, 0, 0.3);
+    transform: translate(0px, 0px) rotateX(25deg) rotateZ(-10deg);
+    z-index: 2;
+    transition: all 1s ease;
+}
+
+.card:hover {
+    /* transform: translateY(-10vh) rotateX(25deg) rotateZ(-20deg); */
+    transform: translateY(-20vh) rotateZ(0deg);
+    box-shadow: -2px 1px 0px 0px #202020, -40px 40px 40px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    
+}
