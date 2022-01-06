@@ -3,7 +3,7 @@
   "name": "darkwarhouse.io",
   "version": "0.0.0",
   "license": "MIT",
-  "homepage": "https://toasted-marshmallow-co.github.io/darkwarehouse/",
+  "homepage": ".",
   "scripts": {
     "build": "preact build",
     "serve": "sirv build --port 8080 --cors --single",
