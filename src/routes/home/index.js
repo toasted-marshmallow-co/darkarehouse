@@ -1,8 +1,8 @@
 import { h } from 'preact';
 import { Suspense, lazy } from 'preact/compat';
 import style from './style.css';
-import Loader from './../../components/loader';
-import Logo from '../../assets/images/Logo_Light.png';
+import Loader from '../../components/loader';
+import Logo from '/assets/images/Logo_Light.png';
 
 import { FiMail } from 'react-icons/fi';
 import { FiGlobe } from 'react-icons/fi';
