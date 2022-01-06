@@ -16,11 +16,7 @@ const Home = () => (
 		<Suspense  fallback={<Loader />}>
 			<div class={style.wrapper}>
 
-				{/* <div className={style.mockup}>
-					<Suspense fallback={<Loader />}>
-					<Mockups />
-					</Suspense>
-				</div> */}
+				
 
 				<div class={style.content_centered}>
 					<p class={style.message}>Coming soon</p>
@@ -40,7 +36,11 @@ const Home = () => (
 			</div>
 		</Suspense>
 		<div class={style.wrapper}>
-			Two
+			<div className={style.mockup}>
+				<Suspense fallback={<Loader />}>
+					<Mockups />
+				</Suspense>
+			</div>
 		</div>
 		<div class={style.wrapper}>
 			Three
