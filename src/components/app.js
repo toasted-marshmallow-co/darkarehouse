@@ -13,7 +13,7 @@ const App = () => (
 	<div id="app">
 		{/* <Header /> */}
 		<Router>
-			<Home path="" />
+			<Home path="/" />
 			{/* <Profile path="/profile/" user="me" />
 			<Profile path="/profile/:user" user="john"/> */}
 		</Router>

@@ -1,21 +1,25 @@
 import { h } from 'preact';
 import style from './style.css';
+import 'style/utilities.css';
 
-import API from '/assets/images/DW_API.png'
-import UI from '/assets/images/DW_UI.png'
+
 //import UI_2 from '../../assets/images/DW_UI_2.png'
 
-const Mockups = () => (
-    <>
-
-        {/* <div className={style.ui_2}>
-            <img class={style.card} src={UI_2} alt="Darkwarehouse UI"></img>
-        </div> */}
-        <div className={style.api}>
-            <img class={style.card} src={API} alt="Darkwarehouse API"></img>
-        </div>
-        <div className={style.ui}>
-            <img class={style.card} src={UI} alt="Darkwarehouse UI"></img>
+const Mockups = ({src_array}) => (
+        <>
+        <div className={style.card_holder}>
+        {src_array.map(src => {
+            return(
+                <div className={style.card_wrapper}>
+                    <span className={style.card_topper}>
+                        <span className={style.card_button}></span>
+                        <span className={style.card_button}></span>
+                        <span className={style.card_button}></span>
+                    </span>
+                    <img className={style.card} src={src} alt="Darkwarehouse screenshot"></img>
+                </div>
+            )
+        })}
         </div>
     </>
 );
