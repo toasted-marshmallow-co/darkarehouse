@@ -23,7 +23,7 @@ a:hover{
 .wrapper {
 	display: flex;
 	width: 100%;
-	height: 110vh ;
+	height: 100vh ;
 }
 
 /*#region Media Queries */
@@ -129,7 +129,7 @@ a:hover{
 	justify-items: center;
 	text-align: center;
 	flex: 1;
-	padding: 25%;
+	padding: 20%;
 	flex-direction: column;
 	place-content: center;
 }

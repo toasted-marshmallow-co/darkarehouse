@@ -1411,4 +1411,9 @@
     border-color: #202020;
 }
 
+.bg-accent-hover:hover {
+    background: #4FA9E5ED;
+    transition: 0.3s ease-in;
+}
+
 /*#endregion */

@@ -13,18 +13,16 @@
 .card_holder {
     display: flex;
     flex-direction: column;
-    position: relative;
+    /* position: relative; */
     align-items: center;
-    background: #232424ed;
+    
     /* grid-template-rows: repeat(10, 1fr); */
 }
 
 @media only screen and (max-width: 600px) {
     .card_wrapper {
-        left: -5%;
-        top: -4vh;
         width: 75vw;
-        height: 15vh;
+        height: 20vh;
         margin: 5%;
     }
 }
@@ -32,9 +30,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .card_wrapper {
-        left: 10%;
-        top: 0vh;
-        width: 60vw;
+        width: 70vw;
         height: 25vh;
     }
 }
@@ -42,8 +38,6 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .card_wrapper {
-        left: 5%;
-        top: 0vh;
         width: 25vw;
         height: 30vh;
     }
@@ -52,8 +46,6 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .card_wrapper {
-        left: 5%;
-        top: 10vh;
         width: 30vw;
         height: 35vh;
 
@@ -63,10 +55,8 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .card_wrapper {
-        left: 5%;
-        top: 10vh;
-        width: 30vw;
-        height: 35vh;
+        width: 35vw;
+        height: 45vh;
     }
 }
 
@@ -75,15 +65,16 @@
     display: flex;
     flex-direction: column;
     background: #1e1e1e;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    /* position: absolute; */
+    /* right: 0;
+    bottom: 0; */
+    align-self: center;
     border-radius: 20px;
     overflow: hidden;
     padding: 10px;
     box-shadow: -2px 2px 0px 0px #202020,
     -10px 10px 40px 0px rgba(0, 0, 0, 0.3);
-    transform: rotateX(25deg) rotateZ(-20deg);
+    /* transform: rotateX(25deg) rotateZ(-20deg); */
     z-index: 2;
     transition: all 0.75s ease-in-out;
     filter: grayscale(0.5);
@@ -98,13 +89,13 @@
     margin: 100px;
 }
 
-.card_holder .card_wrapper:nth-of-type(1):hover{
+/* .card_holder .card_wrapper:nth-of-type(1):hover{
     transform: translateY(-15vh) rotateX(25deg) rotateZ(-20deg);
 }
 
 .card_holder .card_wrapper:nth-of-type(2):hover{
     transform: translateY(-10vh) rotateX(25deg) rotateZ(-20deg);
-}
+} */
 
 
 
