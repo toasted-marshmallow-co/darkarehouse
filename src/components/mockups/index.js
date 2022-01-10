@@ -5,7 +5,7 @@ import 'style/utilities.css';
 
 //import UI_2 from '../../assets/images/DW_UI_2.png'
 
-const Mockups = ({src_array}) => (
+const Mockups = ({ src_array, callback_activate_modal }) => (
         <>
         <div className={style.card_holder}>
         {src_array.map(src => {
@@ -16,7 +16,7 @@ const Mockups = ({src_array}) => (
                         <span className={style.card_button}></span>
                         <span className={style.card_button}></span>
                     </span> */}
-                    <img className={style.card} src={src} alt="Darkwarehouse screenshot"></img>
+                    <img className={style.card} src={src} alt="Darkwarehouse screenshot" onClick={() => callback_activate_modal(true)}></img>
                 </div>
             )
         })}

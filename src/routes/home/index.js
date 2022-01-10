@@ -1,9 +1,11 @@
 import { h } from 'preact';
+import { useState } from 'preact/hooks';
 import style from './style.css';
 //import Loader from '../../components/loader';
 import Mockups from '../../components/mockups';
 
 import { AiOutlineConsoleSql } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
 import { SiMongodb } from 'react-icons/si';
 import { SiDotnet } from 'react-icons/si';
 import { SiDocker } from 'react-icons/si';
@@ -20,16 +22,38 @@ import Icon from '/assets/icons/Icon.png';
 import API_2 from '/assets/images/DW_API_2.png'
 import UI_2 from '/assets/images/DW_UI_2.png'
 
-const Home = () => (
+const Home = () => {
+
+	const [apiModalActive, setApiModalActive] = useState(false);
+	const [uiModalActive, setUiModalActive] = useState(false);
+
+	return(
+	<>
 	<div class={style.body}>
 		<View_1 />
-		<View_2 />
+		<View_2 callback_activate_modal={setApiModalActive}/>
 		<Toolbox />
-		<View_3 />
+		<View_3 callback_activate_modal={setUiModalActive}/>
 		<View_4 />
 		<Footer />
 	</div>
-);
+	
+	{uiModalActive &&
+		<div class={style.image_modal}>
+		<span className='p-20 text-lg text-accent justify-content-end text-right text-red cursor-pointer align-items-center' onClick={() => setUiModalActive(false)}><AiOutlineClose /></span>
+			<img  src={UI_2} />
+		</div>
+	}
+
+	{apiModalActive &&
+		<div class={style.image_modal}>
+		<span className='p-20 text-lg text-accent justify-content-end text-right text-red cursor-pointer align-items-center' onClick={() => setApiModalActive(false)}><AiOutlineClose /></span>
+			<img src={API_2}/>
+		</div>
+	}
+
+	</>)
+};
 
 export default Home;
 
@@ -56,14 +80,15 @@ const View_1 = () => {
 }
 
 //For displaying details on UI
-const View_2 = () => {
+const View_2 = ({callback_activate_modal}) => {
 	return(
+		<>
 		<div id="sect_a" class={style.wrapper}>
 			{/* <div className={style.mockup}>
 			</div> */}
 			<div className='d-flex flex-1 align-items-center justify-content-center'>
 				{/* <Mockups src_array={[API_2, API]}/> */}
-				<Mockups src_array={[API_2]}/>
+					<Mockups src_array={[API_2]} callback_activate_modal={callback_activate_modal} />
 			</div>
 			<div className='d-flex flex-column flex-1 align-self-center justify-content-start p-20 m-top-20'>
 				{/* <p  className='text-accent text-sm'>
@@ -81,10 +106,11 @@ const View_2 = () => {
 				{/* <span className='border-accent box-hover transition-quick cursor-pointer p-20 m-v-20 b-1 align-self-start d-flex text-inverse'> Find out more </span> */}
 			</div>
 		</div>
+		</>
 	)
 }
 
-const View_3 = () => {
+const View_3 = ({callback_activate_modal}) => {
 	return(
 		<div class={style.wrapper}>
 			<div className='d-flex flex-column flex-1 align-self-center justify-content-end p-20 m-v-20'>
@@ -105,7 +131,7 @@ const View_3 = () => {
 				{/* <span className='border-accent box-hover transition-quick cursor-pointer p-20 m-v-20 b-1 align-self-end d-flex text-inverse'> Find out more </span> */}
 			</div>
 			<div className="d-flex flex-1 align-items-center justify-content-center">
-				<Mockups src_array={[UI_2]} />
+				<Mockups callback_activate_modal={callback_activate_modal} src_array={[UI_2]} />
 				{/* <Mockups src_array={[UI_2, UI]} /> */}
 			</div>
 		</div>
@@ -142,7 +168,7 @@ const Toolbox = () => {
 
 const View_4 = () => {
 	return(
-		<div className='d-flex bg-primary	 flex-column p-v-50 p-20 ' style={{ minHeight: "20vh" }} >
+		<div className='d-flex bg-primary flex-column p-v-50 p-20 ' style={{ minHeight: "20vh" }} >
 			<div className='d-flex flex-1 justify-content-center align-items-center m-v-2'>
 				<h1 className='text-inverse text-center opacity-5'>if this excites you</h1>
 			</div>
@@ -151,9 +177,11 @@ const View_4 = () => {
 					Tell us a bit about your warehouse and your business and we'll get in touch with you.
 				</p>
 				<span className='d-flex justify-content-center m-v-10'>
-					<a href="mailto:tudor.wolff@toastedmarshmallow.co" className='border-accent text-inverse justify-self-center box-hover bg-accent-hover transition-quick cursor-pointer p-h-50 p-v-20 m-v-20 b-1 align-self-start d-flex text-inverse bg-primary'> Contact us </a>
+					<a href="mailto:tudor.wolff@toastedmarshmallow.co" class='border-accent text-inverse justify-self-center box-hover bg-accent-hover transition-quick cursor-pointer p-h-50 p-v-20 m-v-20 b-1 align-self-start d-flex text-inverse bg-primary'>
+						Contact us
+					</a>
 				</span>
-			</div >
+			</div>
 		</div>
 	)
 }
