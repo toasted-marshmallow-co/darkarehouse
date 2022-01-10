@@ -291,7 +291,38 @@ a:hover{
 	    justify-content: center;
 }
 
+.image_modal__JDp5U {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	z-index: 99;
+	background: none;
+	-webkit-backdrop-filter: blur(5px);
+	        backdrop-filter: blur(5px);
+	background: #1E1E1EEE;
+}
 
+.image_modal__JDp5U img{
+	background: #1E1E1E;
+	background-size: contain;
+	background-position: center;
+	height: 90vh;
+	width: auto;
+	padding: 2.5vw;
+	border-radius: 10px;
+	box-shadow: -0px 1px 0px 1px #0b5eac22,
+	-10px 10px 40px 0px rgba(0, 222, 255, 0.1);
+	background: #1E1E1E;
+	-ms-flex-item-align: center;
+	    align-self: center;
+	justify-self: center;
+}
 .api__arWvb {
     grid-column-start: 3;
     grid-column-end: 11;
@@ -440,7 +471,7 @@ a:hover{
 }
 
 .card_wrapper__2uuw5:hover {
-    box-shadow: -0px 1px 0px 1px #0b5eac22, -0px 5px 2px 0px rgba(0, 222, 255, 0.1);
+    box-shadow: -0px 1px 0px 1px #0b5eac22, -10px 10px 40px 0px rgba(0, 222, 255, 0.1);
     cursor: pointer;
     -webkit-filter: grayscale(0);
             filter: grayscale(0);
@@ -1921,6 +1952,10 @@ a:hover{
     font-weight: bolder;
 }
 
+.text-red {
+    color : #f65d69 !important;
+}
+
 .text-tm-red:hover{
     color : #f65d69 !important;
 }
@@ -1988,4 +2023,4 @@ a:hover{
 
 
 
-/*# sourceMappingURL=ssr-bundle.46e00.css.map*/
+/*# sourceMappingURL=ssr-bundle.193ad.css.map*/
