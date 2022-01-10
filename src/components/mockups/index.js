@@ -11,11 +11,11 @@ const Mockups = ({src_array}) => (
         {src_array.map(src => {
             return(
                 <div className={style.card_wrapper}>
-                    <span className={style.card_topper}>
+                    {/* <span className={style.card_topper}>
                         <span className={style.card_button}></span>
                         <span className={style.card_button}></span>
                         <span className={style.card_button}></span>
-                    </span>
+                    </span> */}
                     <img className={style.card} src={src} alt="Darkwarehouse screenshot"></img>
                 </div>
             )

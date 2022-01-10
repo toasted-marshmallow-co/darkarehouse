@@ -1414,6 +1414,24 @@
 .bg-accent-hover:hover {
     background: #4FA9E5ED;
     transition: 0.3s ease-in;
+    color: #FFF5F5 !important;
 }
+
+.segoe {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-light{
+    font-weight: lighter;
+}
+
+.text-bold{
+    font-weight: bolder;
+}
+
+.text-tm-red:hover{
+    color : #f65d69 !important;
+}
+
 
 /*#endregion */

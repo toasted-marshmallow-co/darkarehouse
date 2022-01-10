@@ -18,6 +18,7 @@ a:hover{
 	height: auto;
 	background-color: #1E1E1E;
 	overflow: hidden;
+	scroll-behavior: smooth;
 }
 
 .wrapper {

@@ -26,6 +26,7 @@ const Home = () => (
 		<View_2 />
 		<Toolbox />
 		<View_3 />
+		<View_4 />
 		<Footer />
 	</div>
 );
@@ -43,10 +44,10 @@ const View_1 = () => {
 				<h1 className={style.title}>DarkWarehouse</h1>
 			</span>
 			<p className={style.description}>
-				Sophisticated warehouse automation solutions.
+				Intelligent Warehouse Automation.
 			</p>
 			<span className='d-flex justify-content-center'>
-				<span className='border-accent justify-self-center box-hover bg-accent-hover transition-quick cursor-pointer p-h-50 p-v-20 m-v-20 b-1 align-self-start d-flex text-inverse'> Contact us </span>
+					<input type="button" onClick={() => document.getElementById('sect_a').scrollIntoView()} className='border-accent text-inverse justify-self-center box-hover bg-accent-hover transition-quick cursor-pointer p-h-50 p-v-20 m-v-20 b-1 align-self-start d-flex text-inverse bg-primary' value=" Find out more "/>
 			</span>
 
 		</div>
@@ -57,10 +58,10 @@ const View_1 = () => {
 //For displaying details on UI
 const View_2 = () => {
 	return(
-		<div class={style.wrapper}>
+		<div id="sect_a" class={style.wrapper}>
 			{/* <div className={style.mockup}>
 			</div> */}
-			<div className='d-flex flex-1 align-items-center justify-content-center bg-offshade'>
+			<div className='d-flex flex-1 align-items-center justify-content-center'>
 				{/* <Mockups src_array={[API_2, API]}/> */}
 				<Mockups src_array={[API_2]}/>
 			</div>
@@ -69,14 +70,13 @@ const View_2 = () => {
 					communication layer
 				</p> */}
 				<h1 className='text-inverse'>
-					Darkwarehouse <br/>
-					<span className='text-accent'>a</span>pplication <span className='text-accent'>p</span>rogramming <span className='text-accent'>i</span>nterface
+					Functional and Secure API
 				</h1>
 				
-				<p className='text-inverse opacity-5 p-right-100'>
-					Leveraging the power of the .Net 6.0 framework, we've built our API to be lightning fast.
-					Integrating the latest technology with best practices and meticuluous testing has resulted in
-					an application programming interface that's easy to use, exposes complex functionality, and robust as can be. 
+				<p className='text-inverse opacity-5 p-right-100 segoe text-light text-sm'>
+					Built with the LTS Microsoft .NET framework (currently .NET 6), the API utilises some of the latest technologies and best practices in the enterprise application development industry. 
+					This means the that the user, engineer, application developer or automation integrator will experience lightning fast API responses. 
+					Furthermore, integration is made significantly easier through our compliance of the OpenAPI specification. 
 				</p>
 				{/* <span className='border-accent box-hover transition-quick cursor-pointer p-20 m-v-20 b-1 align-self-start d-flex text-inverse'> Find out more </span> */}
 			</div>
@@ -92,18 +92,19 @@ const View_3 = () => {
 					interface layer
 				</p> */}
 				<h1 className='text-inverse text-right'>
-					Darkwarehouse <br />
-					<span className='text-accent'>u</span>ser <span className='text-accent'>i</span>nterface
+					Responsive UI
 				</h1>
 				
-				<p className='text-inverse opacity-5 p-left-100 text-right'>
-					Responsive, customizable, and interactive is what we've aimed for with our UI.
-					Built using the latest iteration of ReactJs we've made an OS-irrespective, cross-browser web application to interact with and monitor 
-					real world warehouse traffic and throughput from any device. Updated in real time.
+				<p className='text-inverse opacity-5 p-left-100 text-right segoe text-light text-sm'>
+					We identified that the modern UI and HMI technologies in the automation industry are clunky and outdated. 
+					So we set out to create a user experience that uses some of the latest web UI technologies.
+					 The application resides on a locally hosted website so that the data can be accessed from anywhere within the secure local network. 
+					 We constructed our experience using the widely implemented React.js library (maintained by Facebook).
+					 This results in a responsive web UI that works on any device on any OS. Remove the need for overpriced HMI systems. 
 				</p>
 				{/* <span className='border-accent box-hover transition-quick cursor-pointer p-20 m-v-20 b-1 align-self-end d-flex text-inverse'> Find out more </span> */}
 			</div>
-			<div className="d-flex flex-1 align-items-center justify-content-center bg-offshade">
+			<div className="d-flex flex-1 align-items-center justify-content-center">
 				<Mockups src_array={[UI_2]} />
 				{/* <Mockups src_array={[UI_2, UI]} /> */}
 			</div>
@@ -139,13 +140,31 @@ const Toolbox = () => {
 	)
 }
 
+const View_4 = () => {
+	return(
+		<div className='d-flex bg-primary	 flex-column p-v-50 p-20 ' style={{ minHeight: "20vh" }} >
+			<div className='d-flex flex-1 justify-content-center align-items-center m-v-2'>
+				<h1 className='text-inverse text-center opacity-5'>if this excites you</h1>
+			</div>
+			<div className='d-flex flex-1 justify-content-center align-items-center flex-column'>
+				<p className='d-flex text-light text-inverse opacity-5 segoe text-sm	'>
+					Tell us a bit about your warehouse and your business and we'll get in touch with you.
+				</p>
+				<span className='d-flex justify-content-center m-v-10'>
+					<a href="mailto:tudor.wolff@toastedmarshmallow.co" className='border-accent text-inverse justify-self-center box-hover bg-accent-hover transition-quick cursor-pointer p-h-50 p-v-20 m-v-20 b-1 align-self-start d-flex text-inverse bg-primary'> Contact us </a>
+				</span>
+			</div >
+		</div>
+	)
+}
+
 const Footer = () => {
 	return(
 		<div className='d-flex bg-offshade p-v-50 p-20' style={{minHeight: "15vh"}} >
 			<div className='d-flex flex-1 justify-content-center align-items-center'>
-				<span className='b-right-1 p-h-5'>© DarkWarehouse 2021. All rights reserved </span>
+				<span className='b-right-1 p-h-5'>© DarkWarehouse 2022. All rights reserved </span>
 				<span><img src={Icon} alt="TM Logo" height={25} width={30}/></span>
-				<span className="p-h-5"> Solution Provided by <a className="bolded tms-tm-hover transition-quick" href="https://toastedmarshmallow.co/">Toasted Marshmallow</a></span>
+				<span className="p-h-2"> Solution Provided by<a className="text-bold text-tm-red transition-quick" href="https://toastedmarshmallow.co/">Toasted Marshmallow</a></span>
 				{/* <img src="images/Icon.png" alt="Toasted Marshmallow Logo" width="25px" height="25px"></img> */}
 			</div >
 		</div>
